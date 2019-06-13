@@ -1,7 +1,7 @@
 module.exports = {
     title: '代码规范 | LCFE',
     description: 'LC前端代码规范',
-    base: 'fe_standard',
+    base: '/fe_standard/',
     markdown: {
         lineNumbers: true
     },

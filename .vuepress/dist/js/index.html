@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对象 | 代码规范 | LCFE</title>
+    <meta name="description" content="LC前端代码规范">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c337a115.css" as="style"><link rel="preload" href="/assets/js/app.450762cc.js" as="script"><link rel="preload" href="/assets/js/2.19af07df.js" as="script"><link rel="preload" href="/assets/js/12.49898c55.js" as="script"><link rel="prefetch" href="/assets/js/10.2a1afd25.js"><link rel="prefetch" href="/assets/js/11.0402b65e.js"><link rel="prefetch" href="/assets/js/13.57e5f28a.js"><link rel="prefetch" href="/assets/js/14.959e7fba.js"><link rel="prefetch" href="/assets/js/3.2cad5621.js"><link rel="prefetch" href="/assets/js/4.fe8b0524.js"><link rel="prefetch" href="/assets/js/5.4f023635.js"><link rel="prefetch" href="/assets/js/6.cf3aa557.js"><link rel="prefetch" href="/assets/js/7.6d3950ca.js"><link rel="prefetch" href="/assets/js/8.0ccbabcb.js"><link rel="prefetch" href="/assets/js/9.1ad9442a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c337a115.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">代码规范 | LCFE</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>HTML规范</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/html/" class="sidebar-link">代码规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/html/note.html" class="sidebar-link">注释规范</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>CSS规范</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/css/" class="sidebar-link">代码规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/note.html" class="sidebar-link">注释规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/sass.html" class="sidebar-link">sass规范</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><a href="/dir/" class="sidebar-link">目录规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/" class="active sidebar-link">JS规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/name/" class="sidebar-link">命名规范</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="对象"><a href="#对象" aria-hidden="true" class="header-anchor">#</a> 对象</h3> <ul><li>请使用字面量值创建对象</li></ul> <p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const a = new Object()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const a = {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>别使用保留字作为对象的键值，这样在 IE8 下不会运行</li></ul> <p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const a = {
+        default: {},  // default 是保留字
+        common: {}
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const a = {
+        defaults: {},
+        common: {}
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>请使用对象方法的简写方式</li></ul> <p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        value: 1,
+
+        addValue(val) {
+            return item.value + val
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        value: 1,
+
+        addValue(val) {
+            return item.value + val
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>请使用对象属性值的简写方式</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const job = 'FrontEnd'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        job: job
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        job
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>对象属性值的简写方式要和声明式的方式分组</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const job = 'FrontEnd'
+    const department = 'JDC'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        sex: 'male',
+        job,
+        age: 25,
+        department
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const item = {
+        job,
+        department,
+        sex: 'male',
+        age: 25
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="数组"><a href="#数组" aria-hidden="true" class="header-anchor">#</a> 数组</h3> <ul><li>请使用字面量值创建数组
+不推荐：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const items = new Array()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const items = []
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>向数组中添加元素时，请使用 push 方法</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const items = []
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    items[items.length] = 'test'q
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    items.push('test')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>使用拓展运算符 ... 复制数组</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const items = []
+    const itemsCopy = []
+    const len = items.length
+    let i
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    for (i = 0; i &lt; len; i++) {
+        itemsCopy[i] = items[i]
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    itemsCopy = [...items]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="解构赋值"><a href="#解构赋值" aria-hidden="true" class="header-anchor">#</a> 解构赋值</h3> <ul><li>当需要使用对象的多个属性时，请使用解构赋值</li></ul> <p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    function getFullName (user) {
+        const firstName = user.firstName
+        const lastName = user.lastName
+
+        return `${firstName} ${lastName}`
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    function getFullName (user) {
+        const { firstName, lastName } = user
+
+        return `${firstName} ${lastName}`
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>最佳：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    function getFullName ({ firstName, lastName }) {
+        return `${firstName} ${lastName}`
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>当需要使用数组的多个值时，请同样使用解构赋值</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const arr = [1, 2, 3, 4]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const first = arr[0]
+    const second = arr[1]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const [first, second] = arr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="分号"><a href="#分号" aria-hidden="true" class="header-anchor">#</a> 分号</h3> <ul><li>我们遵循 Standard 的规范，不使用分号</li></ul> <p>关于应不应该使用分号的讨论有很多，本规范认为非必要的时候，应该不使用分号，好的 JS 程序员应该清楚场景下是一定要加分号的，相信你也是名好的开发者。</p> <p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const test = 'good';
+    (function () {
+        const str = 'hahaha';
+    })()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    const test = 'good'
+    ;(() =&gt; {
+        const str = 'hahaha'
+    })();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="eval"><a href="#eval" aria-hidden="true" class="header-anchor">#</a> eval()</h3> <p>由于 eval 方法比较 evil，所以我们约定禁止使用该方法</p> <h3 id="with"><a href="#with" aria-hidden="true" class="header-anchor">#</a> with() {}</h3> <p>由于 with 方法会产生神奇的作用域，所以我们也是禁止使用该方法的</p> <h3 id="修改内置对象的原型"><a href="#修改内置对象的原型" aria-hidden="true" class="header-anchor">#</a> 修改内置对象的原型</h3> <p>不要修改内置对象，如 Object 和 Array</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/dir/" class="prev">
+          目录规范
+        </a></span> <span class="next"><a href="/name/">
+          命名规范
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.450762cc.js" defer></script><script src="/assets/js/2.19af07df.js" defer></script><script src="/assets/js/12.49898c55.js" defer></script>
+  </body>
+</html>

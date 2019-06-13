@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>单行注释 | 代码规范 | LCFE</title>
+    <meta name="description" content="LC前端代码规范">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c337a115.css" as="style"><link rel="preload" href="/assets/js/app.450762cc.js" as="script"><link rel="preload" href="/assets/js/2.19af07df.js" as="script"><link rel="preload" href="/assets/js/11.0402b65e.js" as="script"><link rel="prefetch" href="/assets/js/10.2a1afd25.js"><link rel="prefetch" href="/assets/js/12.49898c55.js"><link rel="prefetch" href="/assets/js/13.57e5f28a.js"><link rel="prefetch" href="/assets/js/14.959e7fba.js"><link rel="prefetch" href="/assets/js/3.2cad5621.js"><link rel="prefetch" href="/assets/js/4.fe8b0524.js"><link rel="prefetch" href="/assets/js/5.4f023635.js"><link rel="prefetch" href="/assets/js/6.cf3aa557.js"><link rel="prefetch" href="/assets/js/7.6d3950ca.js"><link rel="prefetch" href="/assets/js/8.0ccbabcb.js"><link rel="prefetch" href="/assets/js/9.1ad9442a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c337a115.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">代码规范 | LCFE</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>HTML规范</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/html/" class="sidebar-link">代码规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/html/note.html" class="active sidebar-link">注释规范</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>CSS规范</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/css/" class="sidebar-link">代码规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/note.html" class="sidebar-link">注释规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/sass.html" class="sidebar-link">sass规范</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><a href="/dir/" class="sidebar-link">目录规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/" class="sidebar-link">JS规范</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/name/" class="sidebar-link">命名规范</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="单行注释"><a href="#单行注释" aria-hidden="true" class="header-anchor">#</a> 单行注释</h3> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;!-- Comment Text --&gt;
+    &lt;div&gt;...&lt;/div&gt;  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;div&gt;...&lt;/div&gt;&lt;!-- Comment Text --&gt;	
+        
+    &lt;div&gt;&lt;!-- Comment Text --&gt;
+        ...
+    &lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="模块注释"><a href="#模块注释" aria-hidden="true" class="header-anchor">#</a> 模块注释</h3> <p>S代表模块开始，E代表模块结束，模块之间要空一行
+推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;!-- S Comment Text A --&gt;	
+    &lt;div class=&quot;mod_a&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- E Comment Text A --&gt;
+        
+    &lt;!-- S Comment Text B --&gt;	
+    &lt;div class=&quot;mod_b&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- E Comment Text B --&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;!-- S Comment Text A --&gt;
+    &lt;div class=&quot;mod_a&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- E Comment Text A --&gt;
+    &lt;!-- S Comment Text B --&gt;	
+    &lt;div class=&quot;mod_b&quot;&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- E Comment Text B --&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/html/" class="prev router-link-active">
+          代码规范
+        </a></span> <span class="next"><a href="/css/">
+          代码规范
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.450762cc.js" defer></script><script src="/assets/js/2.19af07df.js" defer></script><script src="/assets/js/11.0402b65e.js" defer></script>
+  </body>
+</html>

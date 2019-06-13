@@ -15,7 +15,18 @@ module.exports = {
                     ['/html/note', '注释规范']
                 ]
             },
-            ['/css/', 'CSS规范']
+            {
+                title: 'CSS规范',
+                collapsable: false, // 可选的, 默认值是 true,
+                children: [
+                    ['/css/', '代码规范'],
+                    ['/css/note', '注释规范'],
+                    ['/css/sass', 'sass规范']
+                ]
+            },
+            ['/dir/', '目录规范'],
+            ['/js/', 'JS规范'],
+            ['/name/', '命名规范'],
         ]
     }
 }

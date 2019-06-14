@@ -1,6 +1,6 @@
 ## GIT规范
 ### 分支命名规范
- 版本迭代：               features-版本号
+版本迭代：               features-版本号
  
 修复bug：                hotfix-版本号
 

@@ -8,6 +8,11 @@ module.exports = {
     themeConfig: {
         lastUpdated: '上次更新',
         displayAllHeaders: true, // 默认值：false
+        nav: [
+            { text: '主页', link: '/' }, // 导航条
+            { text: 'tools.js', link: 'https://shimo.im/docs/6mrMepl0OgcrWuOe' },
+            { text: '知识库', link: 'https://shimo.im/docs/V1Xo5160UO01p0Ef' }
+        ],
         sidebar:[
             {
                 title: 'HTML规范',   // 必要的

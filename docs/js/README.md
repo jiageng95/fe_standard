@@ -92,6 +92,7 @@
 
 ### 数组
 * 请使用字面量值创建数组
+
 不推荐：
 ```javascript
     const items = new Array()
@@ -200,3 +201,37 @@
 
 ### 修改内置对象的原型
 不要修改内置对象，如 Object 和 Array
+
+### 减少嵌套
+确定条件不允许时，尽早返回。经典使用场景：校验数据
+
+不推荐：
+```javascript
+    if (condition1) {
+        if (condition2) {
+            ...
+        }
+    }
+```
+推荐：
+```javascript
+    if (!condition1) return
+    if (!condition2) return
+    ...
+```
+
+### 表达式
+尽可能简洁表达式
+
+不推荐：
+```
+    if (name === ''){}
+    if (collection.length > 0){}
+    if (notTrue === false){}
+```
+推荐： 
+```
+    if (!name) {}
+    if (collection.length){}
+    if (notTrue){}
+```

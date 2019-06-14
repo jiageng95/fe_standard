@@ -293,11 +293,14 @@
 ```
 
 ### HTML 引号
+使用双引号(“”) 而不是单引号(”) 。
+
+不推荐：
 ```html
-    使用双引号(“”) 而不是单引号(”) 。
-    // 不推荐
     <div class='news-article'></div>
-    // 推荐
+```
+推荐：  
+```html
     <div class="news-article"></div>
 ```
 

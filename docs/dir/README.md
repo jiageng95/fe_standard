@@ -1,3 +1,4 @@
+## 目录规范
 ### 项目结构
 ```javascript
     ├── build                  // 项目构建(webpack)相关代码

@@ -1,11 +1,12 @@
 module.exports = {
     title: '代码规范 | LCFE',
     description: 'LC前端代码规范',
-    // base: '/fe_standard/',
+    base: '/fe_standard/',
     markdown: {
         lineNumbers: true
     },
     themeConfig: {
+        lastUpdated: '上次更新',
         displayAllHeaders: true, // 默认值：false
         sidebar:[
             {

@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jiageng95/fe_standard/issues"
   },
-  "homepage": "https://github.com/jiageng95/fe_standard#readme"
+  "homepage": "https://github.com/jiageng95/fe_standard#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.1"
+  }
 }

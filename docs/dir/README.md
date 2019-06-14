@@ -1,5 +1,5 @@
 ### 项目结构
-```
+```javascript
     ├── build                  // 项目构建(webpack)相关代码
     |  ├── build.js            // 生产环境构建代码
     |  ├── check-versions.js   // 检查node、npm等版本

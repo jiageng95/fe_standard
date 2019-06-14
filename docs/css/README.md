@@ -1,5 +1,5 @@
 ### 合理的避免使用ID
-```
+```scss
     // 不推荐
     #content .title {
     font-size: 2em;
@@ -11,7 +11,7 @@
 ```
 
 ### 使用缩写属性
-```
+```scss
     // 不推荐
     border-top-style: none;
     font-family: palatino, georgia, serif;
@@ -28,8 +28,8 @@
 ```
 
 ### 省略“0”值后面的单位
-```
-    / 不推荐
+```scss
+    // 不推荐
     padding-bottom: 0px;
     margin: 0em;
     // 推荐
@@ -38,7 +38,7 @@
 ```
 
 ### 声明顺序
-```
+```scss
     1. 结构性属性：
     display
     position, left, top, right etc.
@@ -50,38 +50,38 @@
 
     // 不推荐
     .box {
-    font-family: 'Arial', sans-serif;
-    border: 3px solid #ddd;
-    left: 30%;
-    position: absolute;
-    text-transform: uppercase;
-    background-color: #eee;
-    right: 30%;
-    isplay: block;
-    font-size: 1.5rem;
-    overflow: hidden;
-    padding: 1em;
-    margin: 1em;
+        font-family: 'Arial', sans-serif;
+        border: 3px solid #ddd;
+        left: 30%;
+        position: absolute;
+        text-transform: uppercase;
+        background-color: #eee;
+        right: 30%;
+        isplay: block;
+        font-size: 1.5rem;
+        overflow: hidden;
+        padding: 1em;
+        margin: 1em;
     }
     // 推荐
     .box {
-    display: block;
-    position: absolute;
-    left: 30%;
-    right: 30%;
-    overflow: hidden;
-    margin: 1em;
-    padding: 1em;
-    background-color: #eee;
-    border: 3px solid #ddd;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+        display: block;
+        position: absolute;
+        left: 30%;
+        right: 30%;
+        overflow: hidden;
+        margin: 1em;
+        padding: 1em;
+        background-color: #eee;
+        border: 3px solid #ddd;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
     }
 ```
 
 ### 属性名后始终使用一个空格
-```
+```scss
     // 不推荐
     h3 {
     font-weight:bold;
@@ -93,7 +93,7 @@
 ```
 
 ### 每个选择器和属性声明总是使用新的一行
-```
+```scss
     // 不推荐
     a:focus, a:active {
     position: relative; top: 1px;
@@ -108,7 +108,7 @@
 ```
 
 ### CSS引号
-```
+```scss
     属性选择器或属性值用双引号（””），而不是单引号（”）括起来。
     URI值（url()）不要使用引号。
     // 不推荐

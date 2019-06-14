@@ -1,7 +1,7 @@
 ### 嵌套规范
 * 选择器嵌套
 
-```
+```scss
     /* CSS */
     body .header {}
 
@@ -11,7 +11,7 @@
     。     {}
     }
 ```
-```
+```scss
     /* CSS */
     .header {}
     .header_cover {}
@@ -27,7 +27,7 @@
     }
 ```
 * 属性嵌套
-```
+```scss
     /* CSS */
     .header {
         background-color: red;
@@ -49,7 +49,7 @@
 * 变量
 
 可复用属性尽量抽离为页面变量，易于统一维护
-```
+```scss
     // CSS
     .header {
         color: red;
@@ -66,7 +66,7 @@
 * 混合(mixin)
 
 根据功能定义模块，然后在需要使用的地方通过 @include 调用，避免编码时重复输入代码段
-```
+```scss
     // CSS
     .box_1 {
         -webkit-border-radius: 5px;
@@ -112,7 +112,7 @@
 ```
 * extend继承
 
-```
+```scss
     // CSS
     .box_1 {
         font-size: 12px;
@@ -136,7 +136,7 @@
 ```
 * function 函数
 
-```
+```scss
     @function pxToRem($px) {
         @return $px / 10px * 1rem;
     }

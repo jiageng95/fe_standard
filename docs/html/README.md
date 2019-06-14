@@ -1,6 +1,6 @@
 ### 组件中的data
 组件的 data 必须是一个函数。当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数。
-```
+```javascript
     export default {
         data () {
             return {
@@ -12,7 +12,7 @@
 
 ### 为v-for设置键值
 总是用 key 配合 v-for。
-```
+```html
     <ul>
         <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
     </ul>
@@ -23,7 +23,7 @@
 
 ### 单文件组件的顶级元素的顺序
 单文件组件应该总是让`<template> 、<script>、和 <style> `标签的顺序保持一致。
-```
+```html
     <!-- ComponentA.vue -->
     <template>...</template>
     <script>...</script>
@@ -39,12 +39,12 @@
 ### 图片文件命名则在每个单词中间用下划线 _ 连接
 
 ### 处理精度问题
-```
+```javascript
     parseFloat((0.1 + 0.2).toFixed(10))
 ```
 
 ### ESLint配置 (.eslintrc.js)
-```
+```javascript
     rules: {
         // allow paren-less arrow functions
         'arrow-parens': 0,
@@ -78,7 +78,7 @@
 ```
 
 ### ESLint常见规则
-```
+```javascript
     "no-alert": 0,//禁止使用alert confirm prompt  
     "no-array-constructor": 2,//禁止使用数组构造器  
     "no-bitwise": 0,//禁止使用按位运算符  
@@ -257,13 +257,13 @@
 
 ### VSCode自动格式化代码(根据ESLint配置修复, 只能修复空格、分号等，变量名只会提示，没法修复)
 配置环境:
-``` 
+```javascript
     npm i -g eslint-plugin-vue
     #or
     npm i -S eslint-plugin-vue
 ```
 创建项目跟路径下的文件：.eslintrc | .eslint.js
-```
+```javascript
     //　添加插件
     "plugins": [
         "vue"
@@ -273,7 +273,7 @@
 1、在vscode添加 eslint 插件
 2、在vscode添加 vetur 插件
 3、修改你的setting.json
-```
+```javascript
     // 添加进你的vscode的 setting.json  
     "eslint.autoFixOnSave": true,
     "eslint.validate": [
@@ -288,12 +288,12 @@
 ### 总是使用 `===` 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰
 
 ### 统一使用单引号(‘)，不使用双引号(“)。这在创建 HTML 字符串非常有好处
-```
+```javascript
     var msg = 'This is some HTML <div class="makes-sense"></div>';
 ```
 
 ### HTML 引号
-```
+```html
     使用双引号(“”) 而不是单引号(”) 。
     // 不推荐
     <div class='news-article'></div>
@@ -310,12 +310,12 @@
 段落元素与标题元素只能嵌套内联元素
 
 不推荐：
-``` 
+```html
     <h1><div></div></h1>
     <p><div></div><div></div></p>
 ```
 推荐：
-```
+```html
     <h1><span></span></h1>
     <p><span></span><span></span></p>
 ```

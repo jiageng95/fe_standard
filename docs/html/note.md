@@ -1,11 +1,11 @@
 ### 单行注释
 推荐：
-```
+```html
     <!-- Comment Text -->
     <div>...</div>  
 ```
 不推荐：
-```
+```html
     <div>...</div><!-- Comment Text -->	
         
     <div><!-- Comment Text -->
@@ -16,7 +16,7 @@
 ### 模块注释
 S代表模块开始，E代表模块结束，模块之间要空一行
 推荐：
-```
+```html
     <!-- S Comment Text A -->	
     <div class="mod_a">
         ...
@@ -30,7 +30,7 @@ S代表模块开始，E代表模块结束，模块之间要空一行
     <!-- E Comment Text B -->
 ```
 不推荐：
-```
+```html
     <!-- S Comment Text A -->
     <div class="mod_a">
         ...
